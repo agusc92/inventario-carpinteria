@@ -1,0 +1,42 @@
+<div class="placas-container">
+    <div class="volver-container">
+        <button id="boton-inicio" class="volver-btn">
+            Volver al inicio
+        </button>
+    </div>
+    <div class="form-container">
+        <form id="formNueva">
+            <h3>Agregar placa nueva</h3>
+            <input type="text" name="color" placeholder="Color" required />
+            <input type="number" name="cantidad" placeholder="Cantidad" required />
+            <input type="text" name="material" placeholder="Material" required />
+            <input type="number" name="espesor" placeholder="Espesor (mm)" required />
+            <input type="text" name="fabricante" placeholder="Fabricante" />
+            <input type="number" name="alto" placeholder="Alto" />
+            <input type="number" name="ancho" placeholder="Ancho" />
+            <input type="text" name="sector" placeholder="Sector" />
+            <button type="submit">Agregar</button>
+        </form>
+
+        <!-- Agregar Stock -->
+        <form id="formStock">
+            <h3>Agregar stock</h3>
+            <input type="text" name="color" placeholder="Color" required />
+            <input type="number" name="cantidad" placeholder="Cantidad" required />
+            <input type="number" name="espesor" placeholder="Espesor" required />
+            <input type="text" name="material" placeholder="Material" />
+            <button type="submit">Agregar</button>
+        </form>
+
+        <!-- Retirar Placa -->
+        <form id="formRetirar">
+            <h3>Retirar placa</h3>
+            <input type="text" name="cliente" placeholder="Cliente" required />
+            <input type="number" name="cantidad" placeholder="Cantidad" required />
+            <input type="text" name="color" placeholder="Color" />
+            <input type="text" name="material" placeholder="Material" />
+            <input type="number" name="espesor" placeholder="Espesor" />
+            <button type="submit">Aceptar</button>
+        </form>
+    </div>
+</div>

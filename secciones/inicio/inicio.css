@@ -1,0 +1,307 @@
+/* Fuente sencilla y diseño limpio */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f4f0;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  background-color: #8b5e3c;
+  color: #fff;
+}
+
+.volver-btn {
+  background-color: #8b5e3c;
+  color: white;
+  cursor: pointer;
+
+  padding: 0.7rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+}
+
+.volver-btn:hover {
+  background-color: #a1704d;
+}
+.contenedor {
+  display: flex;
+  justify-content: center;
+  
+}
+.contenedor-inicio{
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  .renglon{
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    height: 200px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  
+  .movimientos {
+    background-color: #4a6fa5;
+    margin-right: 20px;
+  }
+  
+  .stock {
+    background-color: #82b366;
+  }
+  .gestion-placas{
+    background-color: #a1704d;
+  }
+
+  .retiros{
+    background-color: burlywood;
+  }
+}
+
+
+.btn-header {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.btn-logout {
+  right: 160px;
+}
+
+.btn-header:hover {
+  background-color: #0056b3;
+}
+
+.contenedor-stock{
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: #eee;
+  }
+  
+  .filters input {
+    padding: 0.7rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+  }
+  
+  .filters input {
+    width: 200px;
+  }
+  
+  
+  
+  table {
+    width: 90%;
+    margin: 0 auto 3rem auto;
+    border-collapse: collapse;
+    font-size: 1rem;
+  }
+  
+  thead {
+    background-color: #4a6fa5;
+    color: white;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 0.8rem;
+    text-align: center;
+  }
+  
+  tbody tr:hover {
+    background-color: #f0f0f0;
+  }
+}
+
+
+.placas-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f6f6f6;
+  font-family: 'Segoe UI', sans-serif;
+  width: 70%;
+  .form-container{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  form {
+    flex: 1;
+    min-width: 280px;
+    max-width: 320px;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-top: 6px solid #4a6fa5;
+    transition: transform 0.2s ease;
+  }
+  
+  form:hover {
+    transform: translateY(-3px);
+  }
+  
+  form h3 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color: #4a6fa5;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+  }
+  
+  form input {
+    width: 100%;
+    margin-bottom: 0.8rem;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease;
+  }
+  
+  form input:focus {
+    border-color: #4a6fa5;
+    outline: none;
+    background-color: #f0f8ff;
+  }
+  
+  form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a6fa5;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .volver-container {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  
+}
+
+.movimientos-container {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .filters input {
+    padding: 10px;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 180px;
+    transition: border-color 0.2s ease;
+  }
+  
+  .filters input:focus {
+    border-color: #4a6fa5;
+    outline: none;
+    background-color: #f0f8ff;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    box-shadow: 0 0 12px rgba(0,0,0,0.08);
+  }
+  
+  thead {
+    background-color: #4a6fa5;
+    color: white;
+  }
+  
+  th, td {
+    padding: 0.75rem;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  tbody tr:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .volver-container {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .volver-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    background-color: #e0e0e0;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .volver-btn:hover {
+    background-color: #d0d0d0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.oculto {
+  visibility: hidden;
+}
