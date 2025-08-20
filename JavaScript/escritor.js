@@ -32,12 +32,12 @@ async function escribirInicio() {
         if (!scriptStock) {
           // Primero cargamos mock.js
           
-          mockScript.onload = () => {
+          
             // Una vez que mock.js está cargado, cargamos stock.js
             const stockScript = document.createElement("script");
             stockScript.src = "secciones/stock/stock.js";
             document.body.appendChild(stockScript);
-          };
+          
           
     
           scriptStock = true;
