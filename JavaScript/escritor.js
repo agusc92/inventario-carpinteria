@@ -56,13 +56,13 @@ async function escribirInicio() {
 
   async function escribirMovimientos(){
     try {
-        const respuesta = await fetch("/secciones/movimientos/movimientos.html");
+        const respuesta = await fetch("secciones/movimientos/movimientos.html");
         const html = await respuesta.text();
         contenedor.innerHTML = html;
 
         if(!scriptMovimientos){
         const script = document.createElement("script");
-        script.src = "/secciones/movimientos/movimientos.js";
+        script.src = "secciones/movimientos/movimientos.js";
         document.body.appendChild(script);
         
         }
