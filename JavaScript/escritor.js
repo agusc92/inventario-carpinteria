@@ -2,13 +2,17 @@ const contenedor = document.getElementById("contenedor");
 var scriptStock = false;
 var scriptGestionPlacas = false;
 var scriptMovimientos =false;
-
+var scriptMock = false;
 
 
 async function escribirInicio() {
-  const mockScript = document.createElement("script");
-mockScript.src = "secciones/stock/mock.js";
-document.body.appendChild(mockScript);
+  if(!scriptMock){
+    const mockScript = document.createElement("script");
+    mockScript.src = "secciones/stock/mock.js";
+    document.body.appendChild(mockScript);
+    scriptMock = true;
+  }
+  
     
     try {
       const respuesta = await fetch("secciones/inicio/inincio.html");
