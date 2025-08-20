@@ -2,6 +2,11 @@ const contenedor = document.getElementById("contenedor");
 var scriptStock = false;
 var scriptGestionPlacas = false;
 var scriptMovimientos =false;
+
+const mockScript = document.createElement("script");
+mockScript.src = "secciones/stock/mock.js";
+document.body.appendChild(mockScript);
+
 async function escribirInicio() {
     
     try {
@@ -21,15 +26,14 @@ async function escribirInicio() {
 
         if (!scriptStock) {
           // Primero cargamos mock.js
-          const mockScript = document.createElement("script");
-          mockScript.src = "secciones/stock/mock.js";
+          
           mockScript.onload = () => {
             // Una vez que mock.js está cargado, cargamos stock.js
             const stockScript = document.createElement("script");
             stockScript.src = "secciones/stock/stock.js";
             document.body.appendChild(stockScript);
           };
-          document.body.appendChild(mockScript);
+          
     
           scriptStock = true;
         }
