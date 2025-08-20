@@ -28,31 +28,30 @@ if (scriptStock) {
   
   //asigna los eventos a los filtros
   filtro_color.addEventListener('input', () => {
-    aplicarFiltros();
+    aplicarFiltros(placas);
   });
   filtro_fabricante.addEventListener('change', () => {
-    aplicarFiltros();
+    aplicarFiltros(placas);
   });
   filtro_materiales.addEventListener('change',()=>{
-    aplicarFiltros();
+    aplicarFiltros(placas);
   })
   filtro_espesor.addEventListener('change',()=>{
-    aplicarFiltros();
+    aplicarFiltros(placas);
   })
 
   //aplica los filtros a la lista de tablas y las escribe
-  function aplicarFiltros() {
-    placas_filtradas = placas.filter(placa =>
-      placa.Color.toLowerCase().includes(filtro_color.value.toLowerCase())
-    );
-    placas_filtradas = placas_filtradas.filter(placa => placa.Fabricante.toLocaleLowerCase().includes(filtro_fabricante.value.toLocaleLowerCase()));
-    
-    placas_filtradas = placas_filtradas.filter(placa=>placa.Material.toLocaleLowerCase().includes(filtro_materiales.value.toLocaleLowerCase()))
-    placas_filtradas = placas_filtradas.filter(placa=>placa.Espesor.toLocaleLowerCase().includes(filtro_espesor.value.toLocaleLowerCase()))
+  function aplicarFiltros(placas) {
+    placas_filtradas = filtrarColor(placas,filtro_color.value);
+    placas_filtradas = filtrarFabricante(placas,filtro_fabricante.value);
+    placas_filtradas = filtrarMaterial(placas_filtradas,filtro_materiales.value);
+    placas_filtradas = filtrarEspesor(placas_filtradas,filtro_espesor.value);
+
     escribirTabla(placas_filtradas);
   }
   
-  
+  //Vuelve a setear el boolean en falso para que al salir de la seccion y volver a entrar se escriba correctamente
+  scriptStock = false;
 
   
 }

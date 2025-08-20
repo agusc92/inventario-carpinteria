@@ -19,11 +19,19 @@ async function escribirInicio() {
         const html = await respuesta.text();
         contenedor.innerHTML = html;
 
-        if(!scriptStock){
-        const script = document.createElement("script");
-        script.src = "/secciones/stock/stock.js";
-        document.body.appendChild(script);
-        scriptStock=true;
+        if (!scriptStock) {
+          // Primero cargamos mock.js
+          const mockScript = document.createElement("script");
+          mockScript.src = "secciones/stock/mock.js";
+          mockScript.onload = () => {
+            // Una vez que mock.js está cargado, cargamos stock.js
+            const stockScript = document.createElement("script");
+            stockScript.src = "secciones/stock/stock.js";
+            document.body.appendChild(stockScript);
+          };
+          document.body.appendChild(mockScript);
+    
+          scriptStock = true;
         }
       } catch (error) {
         console.error("Error al cargar el HTML:", error);

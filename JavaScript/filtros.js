@@ -31,6 +31,19 @@ function setearFiltroEspesor(filtro_espesor){
 }
 
 function filtrarColor(placas,valor) {
-    
-    
+    let placas_filtradas
+    return placas_filtradas = placas.filter(placa =>placa.Color.toLowerCase().includes(valor.toLowerCase()));
+}
+function filtrarMaterial(placas,valor) {
+    let placas_filtradas
+    return placas_filtradas = placas.filter(placa =>placa.Material.toLowerCase().includes(valor.toLowerCase()));
+}
+
+function filtrarFabricante(placas,valor) {
+    let placas_filtradas
+    return placas_filtradas = placas.filter(placa =>placa.Fabricante.toLowerCase().includes(valor.toLowerCase()));
+}
+function filtrarEspesor(placas,valor) {
+    let placas_filtradas
+    return placas_filtradas = placas.filter(placa =>placa.Espesor.toLowerCase().includes(valor.toLowerCase()));
 }
