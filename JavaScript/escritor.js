@@ -39,13 +39,13 @@ async function escribirInicio() {
   }
   async function escribirGestionPlacas(){
     try {
-        const respuesta = await fetch("/secciones/gestion-placas/gestion-placas.html");
+        const respuesta = await fetch("secciones/gestion-placas/gestion-placas.html");
         const html = await respuesta.text();
         contenedor.innerHTML = html;
 
         if(!scriptGestionPlacas){
         const script = document.createElement("script");
-        script.src = "/secciones/gestion-placas/gestion-placas.js";
+        script.src = "secciones/gestion-placas/gestion-placas.js";
         document.body.appendChild(script);
         
         }
