@@ -3,11 +3,12 @@ var scriptStock = false;
 var scriptGestionPlacas = false;
 var scriptMovimientos =false;
 
-const mockScript = document.createElement("script");
-mockScript.src = "secciones/stock/mock.js";
-document.body.appendChild(mockScript);
+
 
 async function escribirInicio() {
+  const mockScript = document.createElement("script");
+mockScript.src = "secciones/stock/mock.js";
+document.body.appendChild(mockScript);
     
     try {
       const respuesta = await fetch("secciones/inicio/inincio.html");
